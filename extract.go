@@ -90,9 +90,9 @@ func Extract(athenaDatabase string, athenaOutputBucket string, athenaQuery strin
 
 	erra := reqa.Send()
 	if erra == nil {
-		// fmt.Println(respa)
+		// fmt.Println("StartQueryExecutionRequest", respa)
 	} else {
-		// fmt.Println(erra)
+		fmt.Println("StartQueryExecutionRequest", erra)
 	}
 
 	// Function2
@@ -108,7 +108,7 @@ func Extract(athenaDatabase string, athenaOutputBucket string, athenaQuery strin
 
 		errb := reqb.Send()
 		if errb != nil {
-			// fmt.Println(errb)
+			fmt.Println("GetQueryExecutionRequest", errb)
 		} else {
 			// fmt.Println(respb)
 		}
